@@ -118,6 +118,7 @@ nav > a{
      font-size: .8em;
      position: relative;
 }
+
 nav > img{
    width: 20px;
    height: 20px;
@@ -144,6 +145,10 @@ a:first-child{
 }
 a:nth-child(2){
     line-height: 40px;
+}
+nav > .fa-solid.fa-sliders {
+    display: none;
+    
 }
 .main_information_container{
     width: 100%;
@@ -572,10 +577,64 @@ p.download::before{
     .right_side{
         display: flex;
         flex-direction: column;
-        justify-items: stretch;
-        
-        
+        justify-items: stretch;   
+    }
+    nav > a {
+        display: none;
+    }
+    nav > .fa-solid.fa-sliders {
+        display: inline-block;
+        color: #FDFDFD;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+    .information_number{
+        font-size: .9em;
+    }
+    .information_user{
+        width: 50px;
+        height: 50px;
+    }
+    .information_cart{
+        width: 50px;
+        height: 50px;
+    }
+    .search_bar_container > h1{
+        font-size: 2.5em;
     }
    }
+   @media only screen and (max-width: 750px) {
+       .information_number{
+           display: none;
+       }
+       .information_user{
+        width: 40px;
+        height: 40px;
+    }
+    .information_cart{
+        width: 40px;
+        height: 40px;
+    }
+    .search_bar_container > h1{
+        font-size: 2em;
+    }
+   }
+   @media only screen and (max-width: 600px) {
+    .information_number{
+        display: none;
+    }
+    .information_user{
+     width: 37px;
+     height: 37px;
+ }
+ .information_cart{
+     width: 37px;
+     height: 37px;
+ }
+ .search_bar_container > h1{
+     font-size: 1.7em;
+ }
+}
+
 
  

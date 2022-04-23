@@ -8,6 +8,10 @@ body{
     width: 100vw;
     background-color: #FDFDFD;
 }
+.page_container{
+    width: 100%;
+    height: 100%;
+}
 .search_bar_container{
     width: 100%;
     height: 15%;
@@ -157,6 +161,7 @@ a:nth-child(2){
      justify-content: space-between;
      gap: 10px;
  }
+ 
  .left_side{
      flex: 1;
      display: grid;
@@ -545,6 +550,32 @@ p.download::before{
          right: 8px;
          top: 3px;
 }
-
+@media only screen and (max-width: 900px) {
+    .main_information{
+       display: flex;
+       flex-direction: column;
+    }
+    .left_side{
+        display: flex;
+        flex-direction: column;
+    }
+    .left_bottom{
+        display: none;
+    }
+    .left_scrollbar{
+        display: flex;
+        flex-direction: row;
+    }
+    .left_mini_img{
+        flex: 1;
+    }
+    .right_side{
+        display: flex;
+        flex-direction: column;
+        justify-items: stretch;
+        
+        
+    }
+   }
 
  

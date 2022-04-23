@@ -42,11 +42,12 @@ body{
     width: 100%;
     
 }
-.search_input > i{
-    color: #CAD1DA;
-    position: absolute;
+.search_input > img{
+    position: relative;
     bottom: 5px;
-    font-size: 1.3em;
+    left: 20px;
+    width: 20px;
+    height: 20px;
 }
 .search_input > input:focus{
     outline: none;
@@ -64,6 +65,15 @@ body{
 p:first-child{
     color: #CAD1DA;
 }
+.information_number > .phone::before{
+    content: url('./images/Vector\ 2.svg');
+    position: relative;
+       right: 5px;
+       top: 3px;
+       cursor: pointer;
+  
+}
+
 p:last-child{
     color: #83868B;
 }
@@ -214,11 +224,20 @@ a:nth-child(2){
  }
  .right_side{
     flex: 1;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "main1 main1 main1 main1 main1 "
+    "main2 main2 main2 main2 main2 "
+    "main3 main3 main3 main3 main3 "
+    "main4 main4 main4 main4 main4 "
+    ". . . . .";
+    gap: 10px;
+    background-color: #FDFDFD;
 }
  .right_side_top{
-     flex: 0.7;
+     grid-area: main1;
      display: flex;
      flex-direction: column;
      justify-content: space-between;
@@ -227,7 +246,7 @@ a:nth-child(2){
  }
  .right_side_top > h4{
     color: #161B21;
-    
+    margin: 10px 0;
  }
  .right_side_top > p{
     font-size: .8em;
@@ -235,7 +254,7 @@ a:nth-child(2){
     font-weight: 100;
  }
  .right_side_middle{
-  flex: 1;
+  grid-area: main2;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -432,7 +451,7 @@ a:nth-child(2){
      align-self: center;
  }
  .right_side_bottom{
-    flex: 1;
+    grid-area: main3;
     flex-direction: column;
     align-items: flex-start;
 }
@@ -440,10 +459,9 @@ a:nth-child(2){
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 45px;
+    height: 40px;
     width: 100%;
     background-image: linear-gradient(to right,#29323D, #3a485a,#29323D);
-    margin-top: 10px;
 }
 .learn_more_information > p{
   font-size: .7em;
@@ -466,9 +484,9 @@ a:nth-child(2){
 }
 .right_side_bottom_btns{
   display: flex;
-  margin: 10px 0;
-  gap: 10px;
-  height: 45px;
+  margin: 10px 0 0 0;
+  gap: 20px;
+  height: 40px;
 }
 .right_side_bottom_btns > button{
     flex: 1;
@@ -478,7 +496,7 @@ a:nth-child(2){
 }
 #add_btn > p{
    
-    line-height: 45px;
+    line-height: 40px;
     text-align: center;
     font-size: .9em;
     color: #CAD1DA;
@@ -500,6 +518,7 @@ a:nth-child(2){
     
 }
 .bottom_links{
+    grid-area: main4;
     display: flex;
     align-items: center;
 }

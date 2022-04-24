@@ -189,7 +189,8 @@ nav  .fa-solid.fa-arrow-down-short-wide{
 }
 
 
-nav  span{
+nav  #close_btn{
+ color: var(--white);   
  display: none;
 
 }
@@ -674,7 +675,7 @@ p.download::after{
         transform: rotateY(180deg);
         backface-visibility: hidden;
     }
-    nav  span{
+    nav #close_btn{
         display: inline-block;
         color: var(--white);
         position: absolute;
@@ -684,7 +685,7 @@ p.download::after{
         transition: all .4s ease-in;
 
     }
-    nav  span.active{
+    nav #close_btn.active{
         display: inline-block;
         color: var(--white);
         position: absolute;
@@ -713,9 +714,10 @@ p.download::after{
         height: 35vh;
         width: 100vw;
         display: grid;
-        padding-top: 5%;
-        grid-template-columns: repeat(4, 1fr);
+        padding: 5% 0;
+        grid-template-columns: repeat(3, 1fr);
         justify-items: center;
+        align-items: center;
     }
     #navbar.active > a{
       display: inline;
@@ -776,6 +778,15 @@ p.download::after{
       position: absolute;
       bottom: 20%;
       left: 55%;
+    }
+    p.download::after{
+        content: url('./images/downside.svg');
+        position: absolute;
+        left: -16%;
+        bottom: -3px;
+    }
+    .bottom_links > p{
+      font-size: .7em;
     }
 }
 
